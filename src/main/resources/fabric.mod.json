@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "serverlink",
+  "version": "${version}",
+  "name": "ServerLink",
+  "description": "A mod to link server events together such as chat and player deaths.",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/serverlink/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "gg.evoesports.mc.serverlink.Serverlink"
+    ]
+  },
+  "mixins": [
+    "serverlink.mixins.json",
+    {
+      "config": "serverlink.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
